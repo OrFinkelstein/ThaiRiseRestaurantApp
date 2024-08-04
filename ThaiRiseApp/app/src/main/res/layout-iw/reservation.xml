@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:id="@+id/reservation">
+
+    <!-- Fix header for Reservation -->
+    <LinearLayout
+        android:id="@+id/fixed_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/offWhite"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <!--  Go Back arrow -->
+
+        <ImageButton
+            android:id="@+id/goBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_arrow_he"
+            android:layout_margin="10dp"/>
+
+        <!--  Reservation  -->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="@string/reserve_seats"
+            android:textSize="20sp"
+            android:textColor="@color/dark_green"
+            android:fontFamily="@font/chrusty_rock"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <!-- Scroll View -->
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/haki"
+        android:layout_below="@id/fixed_header">
+
+        <!-- Linear Layout - main page -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--  Header of number guests -->
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/guests"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <!-- Choose the number of guests  -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp">
+
+                <!--  Decrease  -->
+
+                <ImageButton
+                    android:id="@+id/minus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circular_btn"
+                    android:src="@drawable/minus" />
+
+                <!--  Number of guests -->
+
+                <TextView
+                    android:id="@+id/numberGuests"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/guest_number"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_green"
+                    android:textSize="20sp"
+                    android:background="@color/offWhite"/>
+
+                <!--  Increase  -->
+
+                <ImageButton
+                    android:id="@+id/plus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circular_btn"
+                    android:src="@drawable/up" />
+
+            </LinearLayout>
+
+            <!--  Large groups message  -->
+
+            <TextView
+                android:id="@+id/large_groups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/big_groups"
+                android:fontFamily="@font/lato"
+                android:visibility="gone"/>
+
+            <!--  Date  -->
+
+            <Button
+                android:id="@+id/date_button"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:backgroundTint="@color/offWhite"
+                android:text="@string/date"
+                android:textColor="@color/dark_green"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <!-- Valid date -->
+
+            <TextView
+                android:id="@+id/valid_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/valid_date"
+                android:fontFamily="@font/lato"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+
+            <!--  Time  -->
+
+            <Button
+                android:id="@+id/time_button"
+                android:layout_marginBottom="10dp"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/offWhite"
+                android:text="@string/time"
+                android:textColor="@color/dark_green"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <!--  Your Preferences  -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/lato"
+                android:text="@string/your_preferences"/>
+
+            <!--  Vegan option  -->
+
+            <ToggleButton
+                android:id="@+id/vegan_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textOff="@string/vegan"
+                android:textOn="@string/vegan"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/dark_green"
+                android:checked="false"
+                android:background="@color/offWhite"/>
+
+            <!--  Payment Method  -->
+
+            <RadioGroup
+                android:id="@+id/payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Cash -->
+
+                <RadioButton
+                    android:id="@+id/cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="@string/cash"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/lato"/>
+
+                <!--  Credit  -->
+
+                <RadioButton
+                    android:id="@+id/credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="@string/credit"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/lato"/>
+
+            </RadioGroup>
+
+            <!-- Table / Bar -->
+
+            <RadioGroup
+                android:id="@+id/seat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Table -->
+
+                <RadioButton
+                    android:id="@+id/table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="@string/table"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/lato" />
+
+                <!--  Bar  -->
+
+                <RadioButton
+                    android:id="@+id/bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="@string/bar"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/lato" />
+
+
+            </RadioGroup>
+
+            <!-- Name of reservation -->
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:inputType="text"
+                android:layout_marginVertical="10dp"
+                android:hint="@string/your_name"
+                android:fontFamily="@font/lato"
+                android:textSize="18sp"
+                android:textDirection="rtl" />
+
+            <!-- Email -->
+
+            <EditText
+                android:id="@+id/mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/your_email"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/lato"
+                android:textSize="18sp"
+                android:textDirection="rtl" />
+
+            <!-- Phone number -->
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/phone_number"
+                android:fontFamily="@font/lato"
+                android:textSize="18sp"
+                android:inputType="number"
+                tools:ignore="TextFields" />
+
+            <!--  Confirm Details  -->
+
+            <CheckBox
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/please_confirm"
+                android:checked="false"
+                android:fontFamily="@font/lato"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <!--  Make Sure  -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/make_sure"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:text="@string/make_sure"
+                android:fontFamily="@font/lato"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_green"
+                android:layout_marginTop="-5dp"/>
+
+            <!--  Submit  -->
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="20dp"
+                android:text="@string/submit"
+                android:textSize="24sp"
+                android:textColor="@color/dark_green"
+                android:fontFamily="@font/chrusty_rock"
+                android:paddingVertical="18dp"
+                android:backgroundTint="@color/lightBlue"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

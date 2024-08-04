@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/submit"
+    android:orientation="vertical"
+    android:background="#FBFBFB">
+
+    <!--  Confirm  Sign  -->
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_confirm"
+        android:src="@drawable/baseline_done_24"/>
+
+    <!--  Confirmation Number  -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/confirmation_number"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/lato"/>
+
+    <TextView
+        android:id="@+id/number_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:text="1 2 3 4 5 6"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/lato"/>
+
+    <!--  Name  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:id="@+id/name_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!--  Email  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:id="@+id/email_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- Phone -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:id="@+id/phone_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- Guests -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/guest_confirm"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:id="@+id/guests_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- Date -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_confirm"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:id="@+id/date_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- Time -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_confirm"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:id="@+id/time_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!--  Don't late  -->
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/dontLate"
+        android:fontFamily="@font/lato"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"/>
+
+    <!-- Vegan -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vegan_confirm"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:id="@+id/vegan_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:fontFamily="@font/lato"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- Seat -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seat"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:id="@+id/seat_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_selected"
+            android:fontFamily="@font/lato"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- Payment -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato"/>
+
+        <TextView
+            android:id="@+id/payment_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_selected"
+            android:fontFamily="@font/lato"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- Button Done -->
+
+    <Button
+        android:layout_marginVertical="20dp"
+        android:id="@+id/done"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:fontFamily="@font/lato"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingVertical="5dp"
+        android:backgroundTint="@color/blue"/>
+
+</LinearLayout>
