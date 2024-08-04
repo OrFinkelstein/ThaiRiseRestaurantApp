@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Background color for the text -->
+<!--    <solid android:color="@android:color/transparent" />-->
+
+    <gradient
+        android:startColor="@color/darkgray"
+    android:endColor="@color/gray"
+    android:angle="45"/>
+
+    <!-- Stroke for the text -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/white" />
+</shape>
